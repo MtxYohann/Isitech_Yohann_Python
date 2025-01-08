@@ -1,0 +1,20 @@
+{
+    "Caf\u00e9 noir": {
+        "prix": 20
+    },
+    "Caf\u00e9 au lait": {
+        "prix": 25
+    },
+    "Th\u00e9": {
+        "prix": 15
+    },
+    "Chocolat au lait": {
+        "prix": 35
+    },
+    "Cappuccino": {
+        "prix": 40
+    },
+    "Annuler": {
+        "prix": 0
+    }
+}
