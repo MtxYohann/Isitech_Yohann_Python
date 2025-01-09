@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Mon template</title>
+</head>
+
+<body>
+    <h1> Mon template </h1>
+    <p>Hello {{prenom}} sur ma page de blog</p>
+    <h2> la liste de mes montres </h2>
+    {% for montre in montres %}
+    <h3>{{montre}}</h3>
+    {% endfor %}
+    {% if age > 18 %}
+    <p> <b> PAS OPEN BAR {{age}}</b></p>
+    {% else %}
+    <p> <b> OPEN BAR {{age}}</b></p>
+    {% endif %}
+    {% load static %}
+    <img width=100px src="{% static 'telechargement.jpg' %}" />
+    {% for blogpage in lstBlogPages %}
+    <hr>
+    <p>{{ blogpage.title }} - {{blogpage.fk_categories}}</p>
+    <p>{{ blogpage.content }}</p>
+    <img width="100" src="{{ blogpage.image.url }}" alt="{{ blogpage.title }}">
+    {% for tagelement in blogpage.tagList.all %}
+    {{tagelement}}
+    {% endfor %}
+    {% endfor %}
+</body>
+
+</html>
